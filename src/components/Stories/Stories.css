@@ -1,0 +1,27 @@
+.Stories {
+  position: relative;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 12px 0;
+}
+
+.Stories::-webkit-scrollbar {
+  display: none;
+}
+
+.Stories__List {
+  margin-top: 0;
+  background-color: #fafafa;
+  box-shadow: 0px 0.33px 0px #a6a6aa;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.Stories__List {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
