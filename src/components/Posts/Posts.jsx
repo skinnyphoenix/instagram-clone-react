@@ -1,9 +1,18 @@
 import "./Posts.css";
+import SinglePost from "../SinglePost/SinglePost";
 
-const Posts = () => {
+const Posts = ({ posts }) => {
   return (
     <>
-      <div className="Posts">Posts</div>
+      <div>
+        <ul className="postsWrapper">
+          {posts.map((post) => (
+            <li className="singlePost__">
+              <SinglePost post={post} />
+            </li>
+          ))}
+        </ul>
+      </div>
     </>
   );
 };
