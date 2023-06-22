@@ -32,7 +32,7 @@ function App() {
         return <Camera />;
 
       case "messanger":
-        return <p>ciao</p>;
+        return <Messanger />;
 
       case "igtv":
         return <p>ciao</p>;
