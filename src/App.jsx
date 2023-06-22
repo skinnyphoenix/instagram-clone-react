@@ -3,8 +3,10 @@ import "./App.css";
 import TopBar from "./components/TopBar";
 import Stories from "./components/Stories";
 import Posts from "./components/Posts";
+import Messanger from "./components/Messanger";
 import { storiesData } from "./mock/mock";
 import { useEffect } from "react";
+import { IGTVIcon } from "./assets";
 
 function App() {
   const [stories, setStories] = useState(storiesData);
@@ -28,6 +30,15 @@ function App() {
         );
       case "camera":
         return <Camera />;
+
+      case "messanger":
+        return <p>ciao</p>;
+
+      case "igtv":
+        return <p>ciao</p>;
+
+      case "logo":
+        return <LogoIcon />;
     }
   };
 

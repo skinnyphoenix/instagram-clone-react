@@ -2,7 +2,6 @@ import Posts from "../Posts";
 import "./SinglePost.css";
 
 const SinglePost = ({ post }) => {
-  console.log(post);
   return (
     <>
       <div className="wrapperUserInfo">
@@ -11,7 +10,7 @@ const SinglePost = ({ post }) => {
           <p>{post.userName}</p>
         </div>
       </div>
-      <div className="postImg">
+      <div className="postImg" key={post.id}>
         {post?.media?.map((media) => (
           <img src={media.src}></img>
         ))}
