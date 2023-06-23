@@ -7,6 +7,9 @@ import Messanger from "./components/Messanger";
 import { storiesData } from "./mock/mock";
 import { useEffect } from "react";
 import { IGTVIcon } from "./assets";
+// import { Swiper, SwiperSlide, Pagination } from "swiper/react";
+
+import "swiper/css";
 
 function App() {
   const [stories, setStories] = useState(storiesData);
@@ -46,6 +49,11 @@ function App() {
     <>
       <TopBar setSection={setSection} />
       {onSectionRender()}
+      {/* <Swiper>
+        <SwiperSlide>Slide1</SwiperSlide>
+        <SwiperSlide>Slide2</SwiperSlide>
+        <SwiperSlide>Slide3</SwiperSlide>
+      </Swiper> */}
     </>
   );
 }

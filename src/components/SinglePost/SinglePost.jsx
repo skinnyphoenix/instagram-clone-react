@@ -1,5 +1,12 @@
 import Posts from "../Posts";
 import "./SinglePost.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper";
+
+import "swiper/css/pagination";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const SinglePost = ({ post }) => {
   return (
@@ -11,9 +18,13 @@ const SinglePost = ({ post }) => {
         </div>
       </div>
       <div className="postImg" key={post.id}>
-        {post?.media?.map((media) => (
-          <img src={media.src}></img>
-        ))}
+        <Swiper modules={[Pagination]} pagination={{ type: "progressbar" }}>
+          {post?.media?.map((media) => (
+            <SwiperSlide>
+              <img src={media.src}></img>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
       <div className="interactions">
         <img src="https://www.pngall.com/wp-content/uploads/2016/04/Instagram-Heart-Transparent.png" alt="" />
